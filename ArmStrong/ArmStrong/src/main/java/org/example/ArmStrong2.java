@@ -2,7 +2,7 @@ package org.example;
 
 import java.util.Scanner;
 
-public class ArmStrong {
+public class ArmStrong2 {
 
     public static void main(String[] args) {
         int n, count = 0, a, b, c, sum = 0;
@@ -11,15 +11,22 @@ public class ArmStrong {
         n = s.nextInt();
         a = n;
         c = n;
-        while (a > 0) {
-            a = a / 10;
+
+        // Calculate the number of digits in 'n' using a for loop
+        for (; a > 0; a /= 10) {
             count++;
         }
-        while (n > 0) {
+
+        // Reset 'a' and 'sum' for the following loop
+        a = n;
+        sum = 0;
+
+        // Calculate the sum of cubes of digits using a for loop
+        for (; n > 0; n /= 10) {
             b = n % 10;
-            sum = (int) (sum + Math.pow(b, count));
-            n = n / 10;
+            sum += Math.pow(b, count);
         }
+
         if (sum == c) {
             System.out.println(c + " is an Armstrong number");
         } else {
