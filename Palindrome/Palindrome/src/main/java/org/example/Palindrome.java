@@ -3,6 +3,7 @@ package org.example;
 import java.util.Scanner;
 
 public class Palindrome {
+
     public static void main(String args[]) {
         int n, m, rev = 0, x;
         Scanner s = new Scanner(System.in);
