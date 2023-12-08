@@ -22,4 +22,5 @@ public class SumOfNCubeNumbers {
         double sum = Math.pow(n * (n + 1) / 2, 2);
         System.out.println("The sum of first " + n + " cube numbers is " + sum);
     }
+
 }
