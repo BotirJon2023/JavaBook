@@ -1,0 +1,30 @@
+package org.example;
+
+import java.io.BufferedReader;
+import java.io.InputStreamReader;
+
+public class FindTheAreaOfParallelogram {
+
+    public static void main(String[] args) {
+
+        BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
+        double base, height;
+
+        System.out.println("Enter the base and the height of the parallelogram");
+
+        try {
+            base = Double.parseDouble(br.readLine());
+            height = Double.parseDouble(br.readLine());
+        } catch (Exception e) {
+            System.out.println("An error occurred");
+            return;
+        }
+
+        if (base <= 0 || height <= 0) {
+            System.out.println("Wrong Input");
+            return;
+        }
+
+        System.out.println("Area = " + base * height);
+    }
+}
