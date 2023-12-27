@@ -1,28 +1,19 @@
 package org.example;
 
-import static java.lang.StrictMath.min;
-import java.util.Scanner;
-
 public class FindGCDOfTwoNumbers {
 
-    public static void main(String args[]) {
-        int a, b, hcf = 1;
-        Scanner s = new Scanner(System.in);
+    public static void main(String[] args) {
 
-        System.out.print("Enter First Number:");
-        a = s.nextInt();
+        int n1 = 81, n2 = 153;
 
-        System.out.print("Enter Second Number:");
-        b = s.nextInt();
+        int gcd = 1;
 
-        int n = min(a, b);
-        for (int i = 2; i < n; i++) {
-            while (a % i == 0 && b % i == 0) {
-                hcf = hcf * i;
-                a = a / i;
-                b = b / i;
-            }
+        for (int i = 1; i <= n1 && i <= n2; ++i) {
+
+            if (n1 % i == 0 && n2 % i == 0)
+                gcd = i;
         }
-        System.out.println("Greatest Common Divisor:" + hcf);
+
+        System.out.println("GCD of " + n1 + " and " + n2 + " is " + gcd);
     }
 }
