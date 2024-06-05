@@ -6,6 +6,7 @@ public class FindTheProductOfTwoMatrices {
 
         int row1, col1, row2, col2;
 
+
         int a[][] = {
 
                 {1, 3, 2},
@@ -13,12 +14,14 @@ public class FindTheProductOfTwoMatrices {
                 {1, 2, 2}
         };
 
+
         int b[][] = {
 
                 {2, 1, 1},
                 {1, 0, 1},
                 {1, 3, 1}
         };
+
 
         row1 = a.length;
 
@@ -29,6 +32,7 @@ public class FindTheProductOfTwoMatrices {
 
         col2 = b[0].length;
 
+
         if(col1 != row2){
 
             System.out.println("Matrices cannot be multiplied");
@@ -36,7 +40,9 @@ public class FindTheProductOfTwoMatrices {
 
         else{
 
+
             int prod[][] = new int[row1][col2];
+
 
             for(int i = 0; i < row1; i++){
 
